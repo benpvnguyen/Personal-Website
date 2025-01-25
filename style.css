@@ -1,0 +1,791 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+
+*{
+    margin: 2;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: red;
+}
+
+/* navbar styling */
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(4px) brightness(40%);
+}
+
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+
+}
+
+.logo span {
+    color: red;
+    text-shadow: 0 0 10 red;
+}
+
+.hamburg,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+
+.nav-container .links{
+    display: flex;
+}
+
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: red;
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+
+.nav-container .links a:hover{
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear; 
+}
+
+.dropdown .links a{
+    background-color: black;
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover{
+    background-color: red;
+}
+
+section{
+    width: 100%;
+    min-height:  90vh;
+    position: relative;
+    top: 35px;
+}
+
+section .home{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding-left: 100px;
+    align-items: center;
+}
+
+.home .home-img {
+    width: 500px;
+    height: 65vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px red;
+    transform: translateY(-20px);
+}
+
+.home .home-img img{
+
+    width: 100%;
+}
+
+.home .home-img:hover{
+    animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%{
+        scale: 1;
+    }
+    
+    50%{
+        scale: 1.05;
+    }
+
+    100%{
+        scale: 1;
+    }
+}
+
+.home .home-content {
+    color: white;
+    width: 40%;
+}
+
+.home-content h1{
+    font-size: clamp(2rem, 1rem + 5vw, 1.8rem);
+}
+
+.home-content h1 span{
+    font-weight: 700;
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+
+.home-content .typewriter{
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 700;
+}
+
+.typewriter span{
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+
+.home-content .typewriter-text{
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+
+.home-content p{
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 15px;
+}
+
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid red;
+    border-radius: 50%;
+    color: red;
+    margin: 5px 15px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+
+.social-links i:hover{
+    scale: 1.3;
+    color: darkgray;
+    background-color: red;
+    filter: drop-shadow(0 0 10px red);
+}
+
+/* About Me Styling*/
+
+section.content{
+    width: 80%;
+    margin: 0px auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section .title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+section .title span{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+section .title span::before,
+section .title span::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: red;
+    left: 0;
+    bottom: 0;
+}
+
+section .title span::after{
+    bottom: -7px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about .about-details .left{
+    width: 45%;
+}
+
+.about .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-left: 40px;
+}
+
+.about-details .right{
+    width: 55%;
+}
+
+section .topic{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-details .right p{
+    margin-right: 40px;
+    text-align: left;
+    color: white;
+}
+
+section .button{
+    margin: 16px 0;
+}
+
+section .button button{
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+    background: red;
+    color: white;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+section .button button:hover{
+    border-color: red;
+    background-color: white;
+    color: red;
+}
+
+/* Experience */ 
+
+.experience{
+    background: black;
+}
+
+.experience .content{
+    padding: 40px 0;
+}
+
+.experience .experience-details{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.experience-details .text{
+    width: 100%;
+}
+
+.experience-details .text .topic{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.experience-details .text p{
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.languages_Used .techskills{
+    height: 50px;
+    width: 50px;
+    background: whitesmoke;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    margin: 0 auto 10px auto;
+    display: block;
+    transition: all 0.4s ease;
+}
+
+.experience .experience-details .experiences{
+    width: 55%;
+    display: flex;
+    margin: 0 10px;
+}
+
+.experience-details .experiences .num{
+    color: white;
+    font-size: 80px;
+}
+
+.experience-details .experiences .exp p{
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 6px;
+}
+
+/* Projects */
+.projects .boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.projects .boxes .box{
+    margin: 10px 100px;
+    width: 1000px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 10px;
+    box-shadow: 0 5px 10px red;
+    cursor: default;
+    color: white;
+    transition: all 0.4s ease;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects .boxes .box:hover{
+    background: red;
+    color: white;
+}
+
+.projects .boxes .box .icon{
+    height: 50px;
+    width: 50px;
+    background: red;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    color: white;
+    margin: 0 auto 10px auto;
+    transition: all 0.4s ease;
+}
+
+.boxes .box:hover .icon {
+    background-color: white;
+    color: red;
+}
+
+.languages_Used {
+    display: flex; /* Use flexbox */
+    flex-direction: row; /* Align items in a row */
+    gap: 10px; /* Add space between icons (optional) */
+    justify-content: center; /* Align items horizontally (optional) */
+    align-items: center;
+}
+.languages_Used .languages{
+    height: 50px;
+    width: 50px;
+    background: red;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    color: white;
+    margin: 0 auto 10px auto;
+    display: block;
+    transition: all 0.4s ease;
+}
+
+.boxes .box:hover .languages {
+    background-color: white;
+    color: red;
+}
+
+.languages {
+    width: 100%;
+}
+
+.projects .boxes .box:hover .topic,
+.projects .boxes .box:hover p{
+    color: white;
+}
+
+.projects .skittles-img{
+    width: 300px;
+    height: 50vh;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: 0 0 50px red;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects .skittles-img img{
+    width: 100%;
+    
+}
+
+.projects .VEXvid{
+    width: 50%;
+    height: 55%;
+    overflow: hidden;
+    object-fit: cover;
+    padding: 1px;
+    box-shadow: 0 0 50px red;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects .VEXvid video{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+
+
+.projects .skills{
+    width: 300px;
+    height: 42vh;
+    overflow: hidden;
+    object-fit: cover;
+    padding: 1px;
+    box-shadow: 0 0 50px red;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects .skills img{
+    width: 100%;
+    
+}
+
+.SkillsON {
+    display: flex;
+}
+
+.projects .portpic{
+    width: 500px;
+    height: 30vh;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: 0 0 50px red;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects .portpic img{
+    width: 100%;
+    
+}
+
+.projects .robloxpic{
+    width: 500px;
+    height: 30vh;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: 0 0 50px red;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects .robloxpic img{
+    width: 100%;
+    
+}
+ /* Footer */
+footer{
+    background: gray;
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    top: 50px;
+}
+
+footer .text span{
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+}
+
+footer .text span a{
+    font-weight: 500;
+    color: white;
+}
+
+footer .text span a:hover{
+    text-decoration: underline;
+}
+
+.scroll-button a{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    background: red;
+    padding: 7px 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: gray;
+    display: none;
+}
+
+
+
+
+
+
+/* Adjustments for Different Screens */
+
+
+
+
+
+@media (max-width: 1000px){
+    .about .about-details{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .about .about-details .left{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .about-details .right{
+        width: 90%;
+        margin: 40px 0;
+    }
+    .projects .boxes .box{
+        margin: 20px 0;
+        width: calc(100% / 2 -20px);
+    }
+
+    .projects .boxes .box{
+        margin: 10px 100px;
+        width: calc(100% - 20px);
+        text-align: center;
+        border-radius: 12px;
+        padding: 30px 10px;
+        box-shadow: 0 5px 10px red;
+        cursor: default;
+        color: white;
+        transition: all 0.4s ease;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .projects .skills{
+        height: 47vh;
+        overflow: hidden;
+        object-fit: cover;
+        padding: 1px;
+        box-shadow: 0 0 50px red;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .SkillsON {
+        display: grid;
+    }
+}
+
+@media (max-width: 900px){
+    .about .left img{
+        height: 350px;
+        width: 350px;
+    }
+    .gaming {
+        display: grid;
+    }
+    
+    .game-covers {
+        display: grid;
+    }
+}
+
+@media (max-width: 968px){
+
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    section .home{
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .links{
+        display: none;
+    }
+
+    .hamburg,
+    .cancel{
+        opacity: 1;
+        display: block;
+        pointer-events: visible;
+    }
+
+    .home .home-content{
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .home .img{
+        z-index: -1;
+        width: 50%;
+        height: 60%;
+    }
+
+    .experience .experience-details{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .experience-details .text{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .proj-details .boxes{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    @media(max-width:650px){
+        .taekwondo {
+            display: grid;
+        }
+        .books {
+            display: grid;
+        }
+    }
+
+    @media(max-width: 600px){
+        .projects .portpic{
+            width: calc(100% - 20px);
+            height: 30vh;
+            overflow: hidden;
+            object-fit: cover;
+            box-shadow: 0 0 50px red;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .projects .robloxpic{
+            width: calc(100% - 20px);
+            height: 30vh;
+            overflow: hidden;
+            object-fit: cover;
+            box-shadow: 0 0 50px red;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    @media(max-width: 500px){
+        .home .img{
+            width: 50%;
+            height: 60%;
+            margin-bottom: 0px;
+        }
+
+        .home .home-content{
+            width: 80%;
+        }
+
+        .home button {
+            margin-top: 15px;
+        }
+    }
+
+    .experience-details .boxes .per{
+        font-size: 50px;
+        color: red;
+    }
+}
+
