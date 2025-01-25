@@ -343,11 +343,6 @@ section .button button:hover{
 }
 
 /* Experience */ 
-
-.experience{
-    background: black;
-}
-
 .experience .content{
     padding: 40px 0;
 }
@@ -575,7 +570,7 @@ footer{
     text-align: center;
     font-family: 'Poppins', sans-serif;
     position: relative;
-    top: 50px;
+    top: 100px;
 }
 
 footer .text span{
@@ -606,16 +601,7 @@ footer .text span a:hover{
     display: none;
 }
 
-
-
-
-
-
 /* Adjustments for Different Screens */
-
-
-
-
 
 @media (max-width: 1000px){
     .about .about-details{
@@ -668,15 +654,7 @@ footer .text span a:hover{
         height: 350px;
         width: 350px;
     }
-    .gaming {
-        display: grid;
-    }
-    
-    .game-covers {
-        display: grid;
-    }
 }
-
 @media (max-width: 968px){
 
     nav .logo{
@@ -736,16 +714,6 @@ footer .text span a:hover{
         align-items: center;
         width: 100%;
     }
-
-    @media(max-width:650px){
-        .taekwondo {
-            display: grid;
-        }
-        .books {
-            display: grid;
-        }
-    }
-
     @media(max-width: 600px){
         .projects .portpic{
             width: calc(100% - 20px);
@@ -756,7 +724,6 @@ footer .text span a:hover{
             margin-left: auto;
             margin-right: auto;
         }
-        
         .projects .robloxpic{
             width: calc(100% - 20px);
             height: 30vh;
@@ -773,19 +740,15 @@ footer .text span a:hover{
             height: 60%;
             margin-bottom: 0px;
         }
-
         .home .home-content{
             width: 80%;
         }
-
         .home button {
             margin-top: 15px;
         }
     }
-
     .experience-details .boxes .per{
         font-size: 50px;
         color: red;
     }
 }
-
