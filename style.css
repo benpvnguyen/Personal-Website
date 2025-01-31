@@ -16,7 +16,6 @@ body{
     height: auto;
     overflow-x: hidden;
     background-color: #fefef2;
-    margin-bottom: 0;
 }
 
 :root {
@@ -506,7 +505,7 @@ footer .text span a:hover{
         font-size: 1.5rem;
     }
 
-    .home .img{
+    .home .home-img{
         z-index: -1;
         width: 50%;
         height: 60%;
@@ -551,7 +550,7 @@ footer .text span a:hover{
         }
     }
     @media(max-width: 500px){
-        .home .img{
+        .home .home-img{
             width: 50%;
             height: 60%;
             margin-bottom: 0px;
