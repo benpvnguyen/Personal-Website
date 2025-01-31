@@ -9,7 +9,6 @@
     outline: none;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    margin-bottom: 0;
 }
 
 body{
@@ -17,6 +16,7 @@ body{
     height: auto;
     overflow-x: hidden;
     background-color: #fefef2;
+    margin-bottom: 0;
 }
 
 :root {
