@@ -537,6 +537,9 @@ footer .text span a:hover{
             margin-left: auto;
             margin-right: auto;
         }
+        .home-content p{
+            width: calc(100% - 20px);
+        }
         .about-details p{
             width: calc(100% - 20px);
         }
