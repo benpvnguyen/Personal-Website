@@ -15,11 +15,12 @@ body{
     width: 100%;
     height: auto;
     overflow-x: hidden;
-    background-color: #fefef2;
+    background-color: #faf9f6;
 }
 
 :root {
-    --text-color: black(0, 0, 0);
+    --text-color: #1f2937;
+    --accent-color: #d97706;
 }
 
 /* navbar styling */
@@ -85,7 +86,7 @@ nav{
     left: 0;
     width: 0%;
     height: 3px;
-    background-color: #FEF0C9;
+    background-color: #d97706;
     transition: 0.2s linear;
 }
 
@@ -94,8 +95,8 @@ nav{
 }
 
 .nav-container .links a:hover{
-    color: #FEF0C9;
-    border-bottom: 2px solid red;
+    color: #d97706;
+    border-bottom: 2px solid #d97706;
 }
 
 .dropdown{
@@ -109,7 +110,7 @@ nav{
 }
 
 .dropdown .links a{
-    background-color: #FEFFF1;
+    background-color: #faf9f6;
     display: flex;
     color: var(--text-color);
     text-decoration: none;
@@ -120,7 +121,7 @@ nav{
 }
 
 .dropdown .links a:hover{
-    background-color: #FEF0C9;
+    background-color: #f3ede4;
 }
 
 section{
@@ -231,7 +232,7 @@ section .title span::after{
     position: absolute;
     height: 3px;
     width: 100%;
-    background: black;
+    background: #d97706;
     left: 0;
     bottom: 0;
 }
@@ -246,7 +247,7 @@ section .title span::after{
 .about-details p{
     width: 600px;
     padding: 4em;
-    background-color: #EED5B7;
+    background-color: #f3ede4;
     border-radius: 12px;
     margin: auto;
 }
@@ -266,7 +267,7 @@ section .title span::after{
 
 .experience-details .text{
     width: 600px;
-    background-color: #FFE4C4;
+    background-color: #f3ede4;
     border-radius: 12px;
     padding: 2em;
     margin-bottom: 20px;
@@ -297,7 +298,7 @@ section .title span::after{
 
 .exp a:link, a:visited {
     border-radius: 12px;
-    background-color: darkgray;
+    background-color: #d97706;
     color: white;
     padding: 14px 25px;
     text-align: center;
@@ -306,7 +307,7 @@ section .title span::after{
 }
 
 .exp a:hover, a:active {
-    background-color: gray;
+    background-color: #b8660f;
 }
 
 /* icons */
@@ -327,10 +328,10 @@ section .title span::after{
     width: 600px;
     padding: 2em;
     border-radius: 12px;
-    background-color: #FFE4C4;
+    background-color: #f3ede4;
     color: var(--text-color);
     font-size: 18px;
-    margin: 0 6px;
+    margin: 10px 6px;
 }
 .experience-details .exp span{
     font-size: 24px;
@@ -351,7 +352,7 @@ section .title span::after{
     text-align: center;
     border-radius: 12px;
     padding: 30px 10px;
-    background-color: #FFE4C4;
+    background-color: #f3ede4;
     cursor: default;
     color: var(--text-color);
     transition: all 0.4s ease;
@@ -360,13 +361,18 @@ section .title span::after{
 }
 
 .projects .boxes .box:hover{
-    background: #EED5B7;
+    background: #ede5da;
 }
 
 .projects .topic{
     font-size: 20px;
     font-weight: 600;
 }
+
+.githubbutton a {
+    color: #d97706;
+}
+
 /* the icons */
 .languages_Used {
     display: flex; /* Use flexbox */
@@ -432,13 +438,12 @@ section .title span::after{
 
  /* Footer */
 footer{
-    background: gray;
+    background: #d97706;
     padding: 15px 0;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     position: relative;
     top: 100px;
-    margin-top: auto;
 }
 
 footer .text span{
@@ -505,12 +510,6 @@ footer .text span a:hover{
         font-size: 1.5rem;
     }
 
-    .home .home-img{
-        z-index: -1;
-        width: 50%;
-        height: 60%;
-    }
-
     .experience .experience-details{
         align-items: center;
         justify-content: center;
@@ -530,7 +529,7 @@ footer .text span a:hover{
             text-align: center;
             border-radius: 12px;
             padding: 30px 10px;
-            background-color: #FFE4C4;
+            background-color: #f3ede4;
             cursor: default;
             color: var(--text-color);
             transition: all 0.4s ease;
@@ -549,22 +548,13 @@ footer .text span a:hover{
         .experience-details .text{
             width: calc(100% - 20px);
             margin-bottom: 50px;
-            background-color: #FFE4C4;
+            background-color: #f3ede4;
         }
     }
     @media(max-width: 500px){
-        .home .home-img{
-            width: 50%;
-            height: 60%;
-            margin-bottom: 0px;
-        }
 
         .home .home-content{
             width: 80%;
-        }
-
-        .home button {
-            margin-top: 15px;
         }
     }
 }
